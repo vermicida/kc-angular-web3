@@ -1,14 +1,23 @@
 <header>
   <h1>Agenda</h1>
 </header>
+
+<!-- La directiva 'RouterOutlet' define la zona dinámica en la cual se pintarán
+  las distintas rutas que se naveguen. Cada ruta navegada renderizará el componente
+  asociado en esta zona dinámica. El objeto Router es el encargado de hacer toda
+  la manipulación del DOM para que sea transparente al desarrollador. -->
+<router-outlet></router-outlet>
+
 <app-formulario-contacto
   (botonGuardarPulsado)="crearContacto($event)"></app-formulario-contacto>
+
 <!--
   Para evaluar el valor de un atributo previamente a su asignación, debemos
   poner entre corchetes el nombre del atributo.
   Si queremos recoger los datos que vienen dados en un evento, utilizamos
   la palabra reservada '$event'.
 -->
+
 <app-lista-contactos
   [contactos]="nombres"
   (botonEliminarPulsado)="eliminarContacto($event)">
