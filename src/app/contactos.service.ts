@@ -20,6 +20,10 @@ export class ContactosService {
     return this._nombres;
   }
 
+  agregarContacto(contacto: Contacto): void {
+    this._nombres.push(contacto);
+  }
+
   eliminarContacto(nombre: Contacto): void {
     this._nombres = this._nombres.filter(function(n) {
       return n.id !== nombre.id;
