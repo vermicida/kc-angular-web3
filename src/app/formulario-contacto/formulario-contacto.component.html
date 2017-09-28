@@ -1,0 +1,20 @@
+<!-- Enlazamos un 'FormGroup' al elemento <form> de HTML
+  gracias a la directiva FormGroup. En el caso de querer
+  enlazar propiedades del modelo del 'FormGroup' a los elementos
+  <input> del formulario, lo haremos usando la directiva
+  'formControlName'. -->
+<form
+  [formGroup]="formulario"
+  (ngSubmit)="guardarContacto()">
+  <div>
+    <label for="">Nombre</label>
+    <input type="text" formControlName="nombre">
+  </div>
+  <div>
+    <label for="">Apellidos</label>
+    <input type="text" formControlName="apellidos">
+  </div>
+  <div>
+    <button type="submit">Guardar Contacto</button>
+  </div>
+</form>
