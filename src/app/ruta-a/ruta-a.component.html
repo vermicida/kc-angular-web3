@@ -1,11 +1,27 @@
-<!--
-  Para evaluar el valor de un atributo previamente a su asignación, debemos
-  poner entre corchetes el nombre del atributo.
-  Si queremos recoger los datos que vienen dados en un evento, utilizamos
-  la palabra reservada '$event'.
--->
+<div class="row">
 
-<app-lista-contactos
-  [contactos]="nombres"
-  (botonEliminarPulsado)="eliminarContacto($event)">
-</app-lista-contactos>
+  <!-- A la izquierda, la lista de contactos -->
+  <div class="six columns">
+    <!--
+      Para evaluar el valor de un atributo previamente a su asignación, debemos
+      poner entre corchetes el nombre del atributo.
+      Si queremos recoger los datos que vienen dados en un evento, utilizamos
+      la palabra reservada '$event'.
+    -->
+    <app-lista-contactos
+      [contactos]="nombres"
+      (contactoSeleccionado)="verDetalles($event)"
+      (botonEliminarPulsado)="eliminarContacto($event)">
+    </app-lista-contactos>
+  </div>
+
+  <!-- A la derecha, los detalles del contacto seleccionado -->
+  <div class="six columns">
+    <app-detalles-contacto
+      [contacto]="contactoSeleccionado">
+    </app-detalles-contacto>
+  </div>
+
+</div>
+
+

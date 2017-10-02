@@ -10,6 +10,7 @@ import { Contacto } from '../contacto';
 export class RutaAComponent implements OnInit {
 
   nombres: Contacto[];
+  contactoSeleccionado: Contacto;
 
   // Para hacer la inyección de dependencias de un servicio
   // debemos hacerlo en el constructor de la clase. Anotamos
@@ -28,6 +29,10 @@ export class RutaAComponent implements OnInit {
   eliminarContacto(nombre: Contacto): void {
     this._contactosService.eliminarContacto(nombre);
     this.nombres = this._contactosService.obtenerContactos();
+  }
+
+  verDetalles(nombre: Contacto): void {
+    this.contactoSeleccionado = nombre;
   }
 
 }
