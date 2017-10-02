@@ -1,0 +1,48 @@
+{
+  "contactos": [
+    {
+      "id": 1,
+      "nombre": "Steve",
+      "apellidos": "Jobs",
+      "movil": "555 666 777",
+      "email": "steve.jobs@apple.com"
+    },
+    {
+      "id": 2,
+      "nombre": "Steve",
+      "apellidos": "Wozniak",
+      "movil": "765 890 345",
+      "email": "steve.wozniak@apple.com"
+    },
+    {
+      "id": 3,
+      "nombre": "Bill",
+      "apellidos": "Gates"
+    },
+    {
+      "id": 4,
+      "nombre": "Sundar",
+      "apellidos": "Pichai",
+      "movil": null,
+      "email": "sundar.pichai@google.com"
+    },
+    {
+      "id": 5,
+      "nombre": "Elon",
+      "apellidos": "Musk",
+      "movil": "345 213 456"
+    },
+    {
+      "id": 6,
+      "nombre": "Bob",
+      "apellidos": "Esponja",
+      "movil": "123 123 123",
+      "email": "bob.esponja@dibus.es"
+    },
+    {
+      "nombre": "Patricio",
+      "apellidos": "Estrella",
+      "id": 7
+    }
+  ]
+}

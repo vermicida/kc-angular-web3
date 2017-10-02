@@ -1,66 +1,35 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { Observable } from 'rxjs/Observable';
 
 import { Contacto } from './contacto';
+import { environment } from '../environments/environment';
 
 // El decorador 'Injectable' indica que la clase decorada
 // debe comportarse como un servicio.
 @Injectable()
 export class ContactosService {
 
-  private _nombres: Contacto[] = [
-    new Contacto(
-      1,
-      'Steve',
-      'Jobs',
-      '555 666 777',
-      'steve.jobs@apple.com'
-    ),
-    new Contacto(
-      2,
-      'Steve',
-      'Wozniak',
-      '765 890 345',
-      'steve.wozniak@apple.com'
-    ),
-    new Contacto(
-      3,
-      'Bill',
-      'Gates'
-    ),
-    new Contacto(
-      4,
-      'Sundar',
-      'Pichai',
-      null,
-      'sundar.pichai@google.com'
-    ),
-    new Contacto(
-      5,
-      'Elon',
-      'Musk',
-      '345 213 456'
-    ),
-    new Contacto(
-      6,
-      'Bob',
-      'Esponja',
-      '123 123 123',
-      'bob.esponja@dibus.es'
-    )
-  ];
+  constructor(private _httpClient: HttpClient) { }
 
-  obtenerContactos(): Contacto[] {
-    return this._nombres;
+  obtenerContactos(): Observable<Contacto[]> {
+    return this._httpClient.get<Contacto[]>(
+      `${environment.rutaApi}/contactos`
+    );
   }
 
-  agregarContacto(contacto: Contacto): void {
-    this._nombres.push(contacto);
+  agregarContacto(contacto: Contacto): Observable<Contacto> {
+    return this._httpClient.post<Contacto>(
+      `${environment.rutaApi}/contactos`,
+      contacto
+    );
   }
 
-  eliminarContacto(nombre: Contacto): void {
-    this._nombres = this._nombres.filter(function(n) {
-      return n.id !== nombre.id;
-    });
+  eliminarContacto(contacto: Contacto): Observable<Contacto> {
+    return this._httpClient.delete<Contacto>(
+      `${environment.rutaApi}/contactos/${contacto.id}`
+    );
   }
 
 }

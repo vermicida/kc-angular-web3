@@ -9,7 +9,7 @@
       la palabra reservada '$event'.
     -->
     <app-lista-contactos
-      [contactos]="nombres"
+      [contactos]="contactos$ | async"
       (contactoSeleccionado)="verDetalles($event)"
       (botonEliminarPulsado)="eliminarContacto($event)">
     </app-lista-contactos>
