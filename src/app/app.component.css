@@ -1,0 +1,22 @@
+nav {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  border-bottom: 1px solid #1EAEDB;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  padding: 14px 20px;
+  border: 1px solid #1EAEDB;
+}
+
+a.seleccionada {
+  border-bottom: 1px solid #fff;
+}

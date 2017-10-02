@@ -4,7 +4,6 @@ import { ContactosService } from '../contactos.service';
 import { Contacto } from '../contacto';
 
 @Component({
-  selector: 'app-ruta-a',
   templateUrl: './ruta-a.component.html',
   styleUrls: ['./ruta-a.component.css']
 })

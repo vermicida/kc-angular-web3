@@ -1,26 +1,32 @@
-<header>
-  <h1>Agenda</h1>
-</header>
+<div class="container">
+  <header>
+    <h1>Agenda</h1>
+  </header>
 
-<!--
-  Barra de navegación.
-  En la directiva 'RouterLink' indicamos la ruta (path) a
-  la cual queremos navegar al pulsar sobre dicho enlace. Esta
-  ruta tiene que estar definida en el módulo de routing.
--->
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/lista-contactos">Mis Contactos</a>
-    </li>
-    <li>
-      <a routerLink="/nuevo-contacto">Nuevo Contacto</a>
-    </li>
-  </ul>
-</nav>
+  <!--
+    Barra de navegación.
+    En la directiva 'RouterLink' indicamos la ruta (path) a
+    la cual queremos navegar al pulsar sobre dicho enlace. Esta
+    ruta tiene que estar definida en el módulo de routing.
+  -->
+  <nav>
+    <ul>
+      <li>
+        <a
+          routerLink="/lista-contactos"
+          routerLinkActive="seleccionada">Mis Contactos</a>
+      </li>
+      <li>
+        <a
+          routerLink="/nuevo-contacto"
+          routerLinkActive="seleccionada">Nuevo Contacto</a>
+      </li>
+    </ul>
+  </nav>
 
-<!-- La directiva 'RouterOutlet' define la zona dinámica en la cual se pintarán
-  las distintas rutas que se naveguen. Cada ruta navegada renderizará el componente
-  asociado en esta zona dinámica. El objeto Router es el encargado de hacer toda
-  la manipulación del DOM para que sea transparente al desarrollador. -->
-<router-outlet></router-outlet>
+  <!-- La directiva 'RouterOutlet' define la zona dinámica en la cual se pintarán
+    las distintas rutas que se naveguen. Cada ruta navegada renderizará el componente
+    asociado en esta zona dinámica. El objeto Router es el encargado de hacer toda
+    la manipulación del DOM para que sea transparente al desarrollador. -->
+  <router-outlet></router-outlet>
+</div>
