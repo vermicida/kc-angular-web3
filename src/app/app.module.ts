@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RutaAComponent } from './ruta-a/ruta-a.component';
 import { RutaBComponent } from './ruta-b/ruta-b.component';
 import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
+import { DatosContactoPipe } from './datos-contacto.pipe';
 
 // Usamos el decorador 'NgModule' para que la clase
 // decorada se comporte como un módulo.
@@ -23,7 +24,8 @@ import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto
     FormularioContactoComponent,
     RutaAComponent,
     RutaBComponent,
-    DetallesContactoComponent
+    DetallesContactoComponent,
+    DatosContactoPipe
   ],
   // En el metadato 'imports' indicamos todos aquellos
   // módulos de los cuáles mi aplicación depende.

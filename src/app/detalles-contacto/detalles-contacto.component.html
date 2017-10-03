@@ -18,7 +18,13 @@
 
   <!-- Datos de contacto -->
   <hr>
+  <!--
+    Para usar un Pipe indicamos el signo del pipe ('|') seguido del nombre
+    del Pipe a usar. El dato que sufre la transformación es el que antecede al
+    signo ('|'). Si el Pipe tiene otros parámetros, se indican tras su nombre y
+    separados por dos puntos (':'). Por ejemplo: dato | pipe :param1 :param2
+  -->
   <div>
-    {{ contacto.email }} | {{ contacto.movil }}
+    {{ contacto | datosContacto }}
   </div>
 </div>
