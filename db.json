@@ -2,42 +2,51 @@
   "contactos": [
     {
       "id": 1,
-      "nombre": "Steve",
-      "apellidos": "Jobs",
+      "nombre": "Tim",
+      "apellidos": "Cook",
       "movil": "555 666 777",
-      "email": "steve.jobs@apple.com"
+      "email": "tim.cook@apple.com",
+      "twitter": "@tim_cook"
     },
     {
       "id": 2,
       "nombre": "Steve",
       "apellidos": "Wozniak",
       "movil": "765 890 345",
-      "email": "steve.wozniak@apple.com"
+      "email": "steve.wozniak@apple.com",
+      "twitter": "@stevewoz",
+      "facebook": "stevewoz"
     },
     {
       "id": 3,
       "nombre": "Bill",
-      "apellidos": "Gates"
+      "apellidos": "Gates",
+      "facebook": "BillGates",
+      "twitter": "@BillGates"
     },
     {
       "id": 4,
       "nombre": "Sundar",
       "apellidos": "Pichai",
       "movil": null,
-      "email": "sundar.pichai@google.com"
+      "email": "sundar.pichai@google.com",
+      "twitter": "@sundarpichai"
     },
     {
       "id": 5,
       "nombre": "Elon",
       "apellidos": "Musk",
-      "movil": "345 213 456"
+      "movil": "345 213 456",
+      "twitter": "@elonmusk",
+      "facebook": "Elon-Musk"
     },
     {
       "id": 6,
-      "nombre": "Bob",
-      "apellidos": "Esponja",
+      "nombre": "Satya",
+      "apellidos": "Nadella",
       "movil": "123 123 123",
-      "email": "bob.esponja@dibus.es"
+      "email": "satya.nadella@microsoft.com",
+      "twitter": "@satyanadella"
     },
     {
       "nombre": "Patricio",

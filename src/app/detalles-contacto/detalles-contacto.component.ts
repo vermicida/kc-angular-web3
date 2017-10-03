@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 import { Contacto } from '../contacto';
 
@@ -10,5 +10,27 @@ import { Contacto } from '../contacto';
 export class DetallesContactoComponent {
 
   @Input() contacto: Contacto;
+  @Output() botonFacebookPulsado = new EventEmitter<string>();
+  @Output() botonTwitterPulsado = new EventEmitter<string>();
+
+  notificarNavegacionFacebook(): void {
+    this.botonFacebookPulsado.emit(this._construirRutaFacebook());
+  }
+
+  notificarNavegacionTwitter(): void {
+    this.botonTwitterPulsado.emit(this._construirRutaTwitter());
+  }
+
+  private _construirRutaFacebook(): string {
+    return this.contacto.facebook
+      ? `https://www.facebook.com/${this.contacto.facebook}`
+      : null;
+  }
+
+  private _construirRutaTwitter(): string {
+    return this.contacto.twitter
+      ? `https://twitter.com/${this.contacto.twitter}`
+      : null;
+  }
 
 }

@@ -18,7 +18,9 @@
   <!-- A la derecha, los detalles del contacto seleccionado -->
   <div class="six columns">
     <app-detalles-contacto
-      [contacto]="contactoSeleccionado">
+      [contacto]="contactoSeleccionado"
+      (botonFacebookPulsado)="verPerfil($event)"
+      (botonTwitterPulsado)="verPerfil($event)">
     </app-detalles-contacto>
   </div>
 
