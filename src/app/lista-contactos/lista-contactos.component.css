@@ -1,5 +1,6 @@
 ul {
   list-style: none;
+  margin-top: 20px;
 }
 
 li {
@@ -10,4 +11,15 @@ li {
 li:hover {
   background: lightgray;
   cursor: pointer;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+button:hover {
+  color: #1EAEDB;
 }

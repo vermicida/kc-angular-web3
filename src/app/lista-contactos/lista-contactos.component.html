@@ -1,9 +1,21 @@
+
+<button (click)="cambiarOrden()">
+  <i
+    class="fa"
+    [ngClass]="{
+      'fa-sort-alpha-asc': orden === 'desc',
+      'fa-sort-alpha-desc': orden === 'asc'
+    }"
+    aria-hidden="true"></i>
+    Ordenar
+</button>
+
 <ul>
   <!--
     La directiva 'NgFor' itera por una colección dada y por cada elemento añade la jerarquía de etiquetas HTML sobre la cuál se está usando.
     -->
   <li
-    *ngFor="let contacto of contactos"
+    *ngFor="let contacto of contactos | ordenarContactos:orden"
     (click)="notificarSeleccionContacto(contacto)">
     {{ contacto.nombre }} {{ contacto.apellidos }}
     <!-- La suscripción a eventos se hace poniendo entre paréntesis el nombre del mismo. -->
