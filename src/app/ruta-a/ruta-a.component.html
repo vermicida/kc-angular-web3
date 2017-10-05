@@ -10,8 +10,7 @@
     -->
     <app-lista-contactos
       [contactos]="contactos$ | async"
-      (contactoSeleccionado)="verDetalles($event)"
-      (botonEliminarPulsado)="eliminarContacto($event)">
+      (contactoSeleccionado)="verDetalles($event)">
     </app-lista-contactos>
   </div>
 
@@ -20,7 +19,8 @@
     <app-detalles-contacto
       [contacto]="contactoSeleccionado"
       (botonFacebookPulsado)="verPerfil($event)"
-      (botonTwitterPulsado)="verPerfil($event)">
+      (botonTwitterPulsado)="verPerfil($event)"
+      (botonEliminarPulsado)="eliminarContacto($event)">
     </app-detalles-contacto>
   </div>
 

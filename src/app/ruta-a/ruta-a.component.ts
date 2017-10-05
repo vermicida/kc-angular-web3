@@ -35,9 +35,13 @@ export class RutaAComponent implements OnInit {
     this.contactos$ = this._contactosService.obtenerContactos();
   }
 
-  eliminarContacto(nombre: Contacto): void {
-    this._contactosService.eliminarContacto(nombre);
-    //this.nombres = this._contactosService.obtenerContactos();
+  eliminarContacto(contacto: Contacto): void {
+    this._contactosService
+      .eliminarContacto(contacto)
+      .subscribe(() => {
+        this.contactos$ = this._contactosService.obtenerContactos();
+        this.contactoSeleccionado = null;
+      });
   }
 
   verDetalles(nombre: Contacto): void {
