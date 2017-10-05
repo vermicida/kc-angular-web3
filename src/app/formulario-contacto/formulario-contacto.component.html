@@ -7,6 +7,7 @@
   [formGroup]="formulario"
   (ngSubmit)="notificarGuardadoContacto()">
 
+  <!-- Nombre -->
   <div class="row">
     <div class="offset-by-three six columns">
       <label for="">Nombre</label>
@@ -20,6 +21,7 @@
     </div>
   </div>
 
+  <!-- Apellidos -->
   <div class="row">
     <div class="offset-by-three six columns">
       <label for="">Apellidos</label>
@@ -33,6 +35,51 @@
     </div>
   </div>
 
+  <!-- Móvil -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Móvil</label>
+      <input
+        type="text"
+        formControlName="movil"
+        class="u-full-width">
+    </div>
+  </div>
+
+  <!-- Correo Electrónico -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Correo electrónico</label>
+      <input
+        type="text"
+        formControlName="email"
+        class="u-full-width">
+    </div>
+  </div>
+
+  <!-- Facebook -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Facebook</label>
+      <input
+        type="text"
+        formControlName="facebook"
+        class="u-full-width">
+    </div>
+  </div>
+
+  <!-- Twitter -->
+  <div class="row">
+    <div class="offset-by-three six columns">
+      <label for="">Twitter</label>
+      <input
+        type="text"
+        formControlName="twitter"
+        class="u-full-width">
+    </div>
+  </div>
+
+  <!-- Botón guardar -->
   <div class="row">
     <div class="offset-by-three six columns">
       <button

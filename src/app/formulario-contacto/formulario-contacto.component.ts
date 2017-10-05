@@ -25,7 +25,11 @@ export class FormularioContactoComponent {
     // las propiedades que recogeremos del formulario HTML.
     this.formulario = this._formBuilder.group({
       nombre: ['', Validators.required],
-      apellidos: ['', Validators.required]
+      apellidos: ['', Validators.required],
+      movil: '',
+      email: '',
+      facebook: '',
+      twitter: ''
     });
   }
 
